@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Secular+One&display=swap');
+
+* {
+    font-family: "Secular One", Arial, Helvetica, sans-serif;
+}
+
+body {
+   background-color: #000000;
+   overflow: hidden;
+}
+
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: violet;
+    min-height: 100vh;
+    width: 80vw;
+    background: linear-gradient(-223deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+    z-index: 0;
+}
+
+main.personagens div.personagem {
+    display: none;
+    height: 100vh;
+}
+
+main.personagens div.personagem.selecionado {
+    display: block;
+}
+
+main.personagens div.personagem img.imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+main.personagens div.personagem div.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+main.personagens div.personagem div.conteudo .logo {
+    background-image: url('../assets/one-piece-logo.png');
+    background-size: cover;
+    height: 100px;
+    width: 230px;
+    margin-bottom: 35px;
+}
+
+main.personagens div.personagem div.conteudo .nome-personagem {
+    color: #ffffff;
+    font-size: 48px;
+    font-family: "Secular One";
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+main.personagens div.personagem div.conteudo .descricao {
+    color: #fff;
+    font-family: "Rubik";
+    line-height: 24px;
+}
+
+ul.botoes {
+    position: absolute;
+    top: 0;
+    right: 0px;
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 180px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+ul.botoes .botao {
+    border: none;
+    background: #000000;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+ul.botoes .botao img {
+    border-radius: 50%;
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #d9d9d9;
+}
